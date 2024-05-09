@@ -1,1 +1,2 @@
 title = "test static site"
+exclude = [ "site", "test" ]
