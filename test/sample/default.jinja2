@@ -3,28 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}{{ post.title }}{% endblock title %}</title>
-
-        <style>
-          a { text-decoration: none; }
-          hr {
-            border: 0;
-            height: 0;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-          }
-        </style>
-        
-        <link rel="shortcut icon" href="favicon.ico">
+        <title>{% block title %} {{ post.title }} {% endblock title %}</title>
     </head>
+
     <body>
         <div class="masthead">
-            <h1 class="title"><a href="/">{{ site.title }}</a></h1>
+        	<h1 class="title"><a href="/">{{ site.title }}</a></h1>
         </div>
-
-        <p><a href="https://github.com/bijumon">Github</a> - <a href="https://exercism.org/profiles/bijumon">Exercism</a> - <a href="/blog.html">blog</a></p>
-        <p><a href="https://mmmnnnmmm.com/">mmmnnnmmm</a> - <a href="https://gwern.net/index">Gwern</a> - <a href="https://matt.might.net/articles/">Matt Might</a> - <a href="https://timrodenbroeker.de/category/all/">tim rodenbröker</a> - <a href="https://thecodingtrain.com/">The Coding Train</a> - <a href="https://cgcookie.com/">CG Cookie</a></p>
-        <hr>
 
         <div id="content">
         {% block content %}
@@ -32,9 +17,7 @@
         </div>
 
         <div class="footer">
-            Copyright © 2000–2023 bijumon
-
-            <a href="https://github.com/bijumon/bijumon.github.io">source</a>
+		Copyright © 2000–2023 {{ site.author }}
         </div>
 </body>
 </html>
